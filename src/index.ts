@@ -70,6 +70,6 @@ app.use('/api/admin', adminRoutes);
 
 
 
-server.listen(7000, () => {
-  console.log('Server running at http://localhost:7000');
+app.listen(7000, () => {
+  console.log(`🚀 Server running on port 7000`);
 });
