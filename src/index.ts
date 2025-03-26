@@ -16,6 +16,7 @@ import { errorMiddleware } from './interfaces/middlewares/errorHandler';
 const app = express();
 const server = http.createServer(app);
 const io = createSocketConnectionForChat(server) 
+const PORT = process.env.BACKEND_PORT || 7000;
 
 // const corsOptions = {
 //   origin: 'http://localhost:5173',
@@ -69,6 +70,6 @@ app.use('/api/admin', adminRoutes);
 
 
 
-server.listen(process.env.BACKEND_PORT, () => {
+server.listen(PORT, () => {
   console.log('Server running at http://localhost:7000');
 });
