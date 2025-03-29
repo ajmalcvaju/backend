@@ -69,15 +69,15 @@ app.use('/api/turfs', turfRoutes);
 app.use('/api/admin', adminRoutes);
 
 
-setInterval(() => {
-  const used = process.memoryUsage();
-  console.log(`Memory Usage:
-  RSS: ${Math.round(used.rss / 1024 / 1024)} MB
-  Heap Total: ${Math.round(used.heapTotal / 1024 / 1024)} MB
-  Heap Used: ${Math.round(used.heapUsed / 1024 / 1024)} MB
-  External: ${Math.round(used.external / 1024 / 1024)} MB
-  `);
-}, 5000);
+// setInterval(() => {
+//   const used = process.memoryUsage();
+//   console.log(`Memory Usage:
+//   RSS: ${Math.round(used.rss / 1024 / 1024)} MB
+//   Heap Total: ${Math.round(used.heapTotal / 1024 / 1024)} MB
+//   Heap Used: ${Math.round(used.heapUsed / 1024 / 1024)} MB
+//   External: ${Math.round(used.external / 1024 / 1024)} MB
+//   `);
+// }, 5000);
 
 
 const PORT = process.env.PORT || 7000;
