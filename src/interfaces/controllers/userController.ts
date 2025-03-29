@@ -108,6 +108,7 @@ export class userController {
   static async verifyOtpForgotPassword(req: Request, res: Response,next: NextFunction) {
     try {
       const { email, otp } = req.body;
+      console.log(req.body)
       await authUseCase.validateOtp(email, otp, 1);
       res.status(200).json({ message: "OTP Verified Successfully" });
     } catch (error: any) {
