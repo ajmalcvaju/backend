@@ -62,7 +62,7 @@ export class AuthUseCase {
     } else if (person === 0) {
       user = await TurfModel.findOne({ email });
     }
-
+    console.log(user?.otp)
     if (!user || user.otp !== otp || new Date() > user.otpExpiresAt!) {
       throw new Error("Invalid or expired OTP.");
     }
