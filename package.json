@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "nodemon --max-old-space-size=256 src/index.ts",
-    "dev": "nodemon --max-old-space-size=256 src/index.ts"
+    "start": "node --max-old-space-size=400 -r ts-node/register src/index.ts",
+    "dev": "node --max-old-space-size=400 -r ts-node/register src/index.ts"
   },
   "keywords": [],
   "author": "",
