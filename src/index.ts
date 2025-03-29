@@ -69,7 +69,8 @@ app.use('/api/turfs', turfRoutes);
 app.use('/api/admin', adminRoutes);
 
 
-
-app.listen(7000, () => {
-  console.log(`🚀 Server running on port 7000`);
+const PORT = process.env.PORT || 7000;
+server.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
 });
+
